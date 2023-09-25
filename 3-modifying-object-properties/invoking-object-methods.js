@@ -113,3 +113,14 @@ const tree = {
 tree.growOneFoot();
 console.log(tree.height);
 // 81
+
+// A refresher on "this" keyword: It refers to the current object context, giving access to properties and methods within the object
+const chameleon = {
+  eyes: 2,
+  lookAround: function () {
+    /* The dollar sign $ is part of the syntax used for template literals to embed expressions within a string */
+    console.log(`I see your ${this.eyes} eyes looking around!`);
+  },
+};
+chameleon.lookAround();
+// "I see your 2 eyes looking around!"

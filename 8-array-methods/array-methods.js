@@ -69,3 +69,39 @@ console.log(albumSalesStrings);
 9: "Purpose by Justin Bieber sold 554000"
 */
 
+// filter()
+/*
+The function passed to filter() is used as a test, and only items in the array that pass the test are included in the new array. Consider the following example:
+*/
+const names2 = ["Micky", "Donald", "Bugs", "Mario"];
+
+const shortNames = names2.filter((name) => {
+  return name.length < 5;
+});
+console.log(shortNames);
+// "Bugs"
+
+/* Using filter()
+ *
+ * Using the musicData array and filter():
+ *   - Return only album objects where the album's name is
+ *     10 characters long, 25 characters long, or anywhere in between
+ *   - Store the returned data in a new `results` variable
+ *
+ * Note:
+ *   - Do not delete the musicData variable
+ *   - Do not alter any of the musicData content
+ */
+
+
+const results = musicData.filter((album) => {
+  return album.name.length >= 10 && album.name.length <= 25;
+})
+
+console.log(results);
+/*
+0: {artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000}
+1: {artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000}
+2: {artist: 'Prince', name: 'The Very Best of Prince', sales: 668000}
+length: 3
+*/
